@@ -11,14 +11,13 @@
 
 #include "square.h"
 
-class Rectangle : public Square
-{
+class Rectangle : public Square {
 private:
     double side_b; // Rectangle other side
 
 public:
-    Rectangle(double x, double y, double a, double b, const char *name);
-
+    Rectangle(double x, double y, double a, double b, const char* name);
+    
     double area() const;
     double perimeter() const;
 
