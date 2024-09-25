@@ -128,58 +128,63 @@ T &Vector<T>::operator[](int i)
 template <typename T>
 T &Vector<T>::VectIter::operator++()
 {
-  if (index > v->size)
+  ++index;
+
+  if (index >= v->size)
   {
     index = 0;
     return v->array[index];
   }
   else
   {
-    return v->array[++index];
+    return v->array[index];
   }
 }
 
 template <typename T>
 T &Vector<T>::VectIter::operator++(int)
 {
-  if (index > v->size)
+  int indexOld = index;
+  index++;
+  if (index >= v->size)
   {
-    int indexOld = index;
     index = 0;
     return v->array[indexOld];
   }
   else
   {
-    return v->array[index++];
+    return v->array[indexOld];
   }
 }
 
 template <typename T>
 T &Vector<T>::VectIter::operator--()
 {
+  --index;
   if (index < 0)
   {
-    index = v->size;
+    index = (v->size) - 1;
     return v->array[index];
   }
   else
   {
-    return v->array[--index];
+    return v->array[index];
   }
 }
 
 template <typename T>
 T &Vector<T>::VectIter::operator--(int)
 {
+  int indexOld = index;
+  index--;
   if (index < 0)
   {
-    int indexOld = index;
-    index = v->size;
+    index = (v->size) - 1;
     return v->array[indexOld];
   }
   else
   {
-    return v->array[index--];
+    return v->array[indexOld];
   }
 }
 

@@ -2,6 +2,7 @@
 //  ENSF 480 - Lab 3
 
 #include <iostream>
+using namespace std;
 
 #ifndef MYSTRING_H
 #define MYSTRING_H
@@ -82,7 +83,7 @@ public:
   // operator overloading of >
   bool operator<(const Mystring &other) const;
   // operator overloading of <
-  friend std::ostream &operator<<(std::ostream &os, const Mystring &s);
+  friend ostream &operator<<(ostream &os, const Mystring &s);
   // operator overloading of <<
 
 private:
