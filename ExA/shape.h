@@ -1,11 +1,3 @@
-/*
- * File Name: shape.h
- * Assignment: Lab 2 Exercise B
- * Lab section: B01
- * Completed by: Ricky Huynh, Akaash Aujla
- * Development Date: September 20th 2024
- */
-
 #ifndef SHAPE_H
 #define SHAPE_H
 
@@ -19,17 +11,23 @@ private:
 
 public:
     Shape(double x, double y, const char* name);
-    ~Shape();
-    
+    virtual ~Shape();
+
     const Point& getOrigin() const;
     const char* getName() const;
     
+    double get_x() const { return origin.getX(); }
+    double get_y() const { return origin.getY(); }
+
     void display() const;
     
     double distance(const Shape& other) const;
     static double distance(const Shape& the_shape, const Shape& other);
-    
+
     void move(double dx, double dy);
+
+    virtual double area() const = 0;
+    virtual double perimeter() const = 0;
 };
 
 #endif

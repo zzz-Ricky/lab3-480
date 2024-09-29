@@ -1,16 +1,9 @@
-/*
- * File Name: rectangle.cpp
- * Assignment: Lab 2 Exercise B
- * Lab section: B01
- * Completed by: Ricky Huynh, Akaash Aujla
- * Development Date: September 20th 2024
- */
-
 #include "rectangle.h"
 #include <iostream>
 
 Rectangle::Rectangle(double x, double y, double a, double b, const char* name)
-    : Square(x, y, a, name), side_b(b) {}
+    : Shape(x, y, name), Square(x, y, a, name), side_b(b) {}
+
 
 double Rectangle::area() const {
     return get_side_a() * side_b;

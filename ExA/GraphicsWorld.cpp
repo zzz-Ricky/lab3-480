@@ -1,22 +1,16 @@
-/*
- * File Name: GrapicsWorld.cpp
- * Assignment: Lab 2 Exercise B
- * Lab section: B01
- * Completed by: Ricky Huynh, Akaash Aujla
- * Development Date: September 20th 2024
- */
-
 #include <iostream>
 #include "GraphicsWorld.h"
 #include "point.h"
 #include "shape.h"
 #include "square.h"
 #include "rectangle.h"
+#include "circle.h"
+#include "curvecut.h"
 
 void GraphicsWorld::run() {
     std::cout << "Authors: Ricky Huynh, Akaash Aujla";
     
-    #if 1 // Change 0 to 1 to test Point
+    #if 0 // Change 0 to 1 to test Point
     Point m (6, 8);
     Point n (6,8);
     n.setX(9);
@@ -75,7 +69,7 @@ void GraphicsWorld::run() {
     rec3.display();
     #endif // end of block to test Rectangle
 
-    #if 1 // Change 0 to 1 to test using array of pointer and polymorphism
+    #if 0 // Change 0 to 1 to test using array of pointer and polymorphism
     std::cout << "\nTesting array of pointers and polymorphism:" << std::endl;
     Shape* sh[4];
     sh[0] = &s;
@@ -87,4 +81,54 @@ void GraphicsWorld::run() {
     sh[2]->display();
     sh[3]->display();
     #endif // end of block to test array of pointer and polymorphism
-}
+    
+    #if 1 // Change 0 to 1 to test Circle
+    std::cout << "\nTesting Functions in class Circle:" << std::endl;
+    Circle c(3, 5, 9, "CIRCLE C");
+    c.display();
+    std::cout << "The area of " << c.getName() << " is: " << c.area() << std::endl;
+    std::cout << "The perimeter of " << c.getName() << " is: " << c.perimeter() << std::endl;
+    d = a.distance(c);
+    std::cout << "\nThe distance between rectangle a and circle c is: " << d << std::endl;
+    
+    CurveCut rc(6, 5, 10, 12, 9, "CurveCut rc");
+    rc.display();
+    std::cout << "The area of " << rc.getName() << " is: " << rc.area() << std::endl;
+    std::cout << "The perimeter of " << rc.getName() << " is: " << rc.perimeter() << std::endl;
+    d = rc.distance(c);
+    std::cout << "\nThe distance between rc and c is: " << d << std::endl;
+    
+    // Using array of Shape pointers:
+    Shape* sh[4];
+    sh[0] = &s;
+    sh[1] = &a;
+    sh[2] = &c;
+    sh[3] = &rc;
+    
+    sh[0]->display();
+    std::cout << "\nThe area of " << sh[0]->getName() << " is: " << sh[0]->area() << std::endl;
+    std::cout << "\nThe perimeter of " << sh[0]->getName() << " is: " << sh[0]->perimeter() << std::endl;
+    
+    sh[1]->display();
+    std::cout << "\nThe area of " << sh[1]->getName() << " is: " << sh[1]->area() << std::endl;
+    std::cout << "\nThe perimeter of " << sh[1]->getName() << " is: " << sh[1]->perimeter() << std::endl;
+    
+    sh[2]->display();
+    std::cout << "\nThe area of " << sh[2]->getName() << " is: " << sh[2]->area() << std::endl;
+    std::cout << "\nThe circumference of " << sh[2]->getName() << " is: " << sh[2]->perimeter() << std::endl;
+    
+    sh[3]->display();
+    std::cout << "\nThe area of " << sh[3]->getName() << " is: " << sh[3]->area() << std::endl;
+    std::cout << "\nThe perimeter of " << sh[3]->getName() << " is: " << sh[3]->perimeter() << std::endl;
+    
+    std::cout << "\nTesting copy constructor in class CurveCut:" << std::endl;
+    CurveCut cc = rc;
+    cc.display();
+    
+    std::cout << "\nTesting assignment operator in class CurveCut:" << std::endl;
+    CurveCut cc2(2, 5, 100, 12, 9, "CurveCut cc2");
+    cc2.display();
+    cc2 = cc;
+    cc2.display();
+    #endif
+} // END OF FUNCTION run
