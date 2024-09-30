@@ -1,5 +1,10 @@
-// iterator.cpp
-// ENSF 480 - Fall 2022 - Lab 3, Ex B
+/*
+ * File Name: iterator.cpp
+ * Assignment: Lab 3 Exercise B
+ * Lab section: B01
+ * Completed by: Ricky Huynh, Akaash Aujla
+ * Development Date: September 24th 2024
+ */
 
 #include <iostream>
 #include <assert.h>

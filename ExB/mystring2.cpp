@@ -1,6 +1,11 @@
-//  mystring2.cpp
-// ENSF 480 - Lab 3
-// M. Moussavi
+/*
+ * File Name: mystring2.cpp
+ * Assignment: Lab 3 Exercise B
+ * Lab section: B01
+ * Completed by: Ricky Huynh, Akaash Aujla
+ * Development Date: September 24th 2024
+ */
+
 #include "mystring2.h"
 #include <string.h>
 #include <iostream>

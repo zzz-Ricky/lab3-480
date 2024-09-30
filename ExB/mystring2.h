@@ -1,5 +1,10 @@
-// File: mystring2.h
-//  ENSF 480 - Lab 3
+/*
+ * File Name: mystring2.h
+ * Assignment: Lab 3 Exercise B
+ * Lab section: B01
+ * Completed by: Ricky Huynh, Akaash Aujla
+ * Development Date: September 24th 2024
+ */
 
 #include <iostream>
 using namespace std;

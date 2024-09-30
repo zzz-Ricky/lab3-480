@@ -1,3 +1,11 @@
+/*
+ * File Name: curvecut.h
+ * Assignment: Lab 3 Exercise A
+ * Lab section: B01
+ * Completed by: Ricky Huynh, Akaash Aujla
+ * Development Date: September 24th 2024
+ */
+
 #ifndef CURVECUT_H
 #define CURVECUT_H
 

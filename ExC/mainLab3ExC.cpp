@@ -1,6 +1,10 @@
-
-// ENSF 480 - Lab 3, Ex C
-// M. Moussavi
+/*
+ * File Name: mainLab3ExC.cpp
+ * Assignment: Lab 3 Exercise B
+ * Lab section: B01
+ * Completed by: Ricky Huynh, Akaash Aujla
+ * Development Date: September 29th 2024
+ */
 
 #include <assert.h>
 #include <iostream>
